@@ -8,8 +8,8 @@ const App = () => {
   
   return (
    <Provider store={store}>
-    <div>
-      <h1>Search For a Package</h1>
+    <div className='absolute top-20 left-1/2 -translate-x-1/2 -translate-y-10'>
+      <h1 className="text-3xl font-bold">Search For a NPM Package</h1>
       <RepositoriesList/>
     </div>
    </Provider>
