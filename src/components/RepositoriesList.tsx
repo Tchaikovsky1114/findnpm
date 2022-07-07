@@ -22,12 +22,7 @@ const RepositoriesList = () => {
   const onChange = (e:ChangeEvent<HTMLInputElement>) => {
     setInputVal(e.target.value)
   }
-
-  // if(!error && !loading && data.length === 0){
-  //   return <h3>Could not found {inputVal}</h3>
-  // }
-
-
+  
   return (
     <div className='p-4'>
       <form className='flex justify-between items-center' onSubmit={onSubmit}>
@@ -35,11 +30,7 @@ const RepositoriesList = () => {
         <button className='border py-2 px-4 border-slate-600 font-bold flex items-center'>Search{loading && <LoadingSpinner />}</button>
       </form>
       {error && <h3>{error}</h3>}
-      
-      
-      
       <RepositoriesItem data={data} error={error} loading={loading} />
-      
     </div>
   );
 };
